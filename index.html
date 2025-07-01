@@ -81,38 +81,38 @@
       margin-top: 40px;
     }
     .menu-item {
-      background: linear-gradient(135deg, #fff, #fff0f0);
-      border: 1px solid #ddd;
-      padding: 25px;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 260px;
       border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      transition: all 0.5s ease;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .menu-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      z-index: 0;
+    }
+    .menu-item h3, .menu-item p {
+      margin: 0;
+      z-index: 1;
+      position: relative;
     }
     .menu-item:hover {
       transform: scale(1.05);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-    }
-    .menu-item::after {
-      content: attr(data-desc);
-      position: absolute;
-      bottom: -100%;
-      left: 0;
-      width: 100%;
-      background: #8B0000;
-      color: white;
-      padding: 15px;
-      font-size: 0.95em;
-      text-align: center;
-      transition: bottom 0.5s ease;
-    }
-    .menu-item:hover::after {
-      bottom: 0;
-    }
-    .menu-item h3 {
-      margin-top: 0;
-      color: #8B0000;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
     }
     .order-button {
       display: inline-block;
@@ -149,7 +149,7 @@
 </head>
 <body>
   <header>
-    <img src="https://github.com/SalwaneALAO/bishap/blob/main/BISHAP.png" alt="Logo BISHAP">
+    <img src="https://raw.githubusercontent.com/charlene-soglo/bishap-site/main/assets/logo-bishap.png" alt="Logo BISHAP">
     <h1>BISHAP</h1>
     <p>Le goût de l'authenticité à base de fleurs d'hibiscus. Frais, naturel et livré rapidement !</p>
   </header>
@@ -169,29 +169,29 @@
   <section id="menu">
     <h2>Notre Menu</h2>
     <div class="menu">
-      <div class="menu-item" data-desc="Rafraîchit chaque gorgée comme une brise de matin.">
+      <div class="menu-item" style="background-image: url('https://source.unsplash.com/400x300/?mint');">
         <h3>Menthe</h3>
-        <p><strong>3€ / 4€ / 5€</strong></p>
+        <p>3€ / 4€ / 5€</p>
       </div>
-      <div class="menu-item" data-desc="Une douceur fruitée avec un parfum irrésistible.">
+      <div class="menu-item" style="background-image: url('https://source.unsplash.com/400x300/?apple');">
         <h3>Pomme</h3>
-        <p><strong>3€ / 4€ / 5€</strong></p>
+        <p>3€ / 4€ / 5€</p>
       </div>
-      <div class="menu-item" data-desc="Un duo tonique qui réveille vos sens.">
+      <div class="menu-item" style="background-image: url('https://source.unsplash.com/400x300/?ginger,lemon');">
         <h3>Gingembre + Citron</h3>
-        <p><strong>3€ / 4€ / 5€</strong></p>
+        <p>3€ / 4€ / 5€</p>
       </div>
-      <div class="menu-item" data-desc="Douceur sucrée au goût de l'enfance.">
+      <div class="menu-item" style="background-image: url('https://source.unsplash.com/400x300/?strawberry');">
         <h3>Fraise</h3>
-        <p><strong>3€ / 4€ / 5€</strong></p>
+        <p>3€ / 4€ / 5€</p>
       </div>
-      <div class="menu-item" data-desc="Acidulée et pétillante, une explosion de goût.">
+      <div class="menu-item" style="background-image: url('https://source.unsplash.com/400x300/?raspberry');">
         <h3>Framboise</h3>
-        <p><strong>3€ / 4€ / 5€</strong></p>
+        <p>3€ / 4€ / 5€</p>
       </div>
-      <div class="menu-item" data-desc="Créez votre recette sur-mesure.">
+      <div class="menu-item" style="background-image: url('https://source.unsplash.com/400x300/?juice');">
         <h3>Mélanges personnalisés</h3>
-        <p><strong>À partir de 4€</strong></p>
+        <p>À partir de 4€</p>
       </div>
     </div>
   </section>
