@@ -169,29 +169,51 @@
   <section id="menu">
     <h2>Notre Menu</h2>
     <div class="menu">
-      <div class="menu-item" style="background-image: url('https://images.unsplash.com/photo-1618130070080-91f4d55a2383?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-        <h3>Menthe</h3>
-        <p>3€ / 4€ / 5€</p>
+      <audio id="hover-sound" src="https://www.soundjay.com/buttons/sounds/button-29.mp3" preload="auto"></audio>
+      <script>
+        function playSound() {
+          const sound = document.getElementById("hover-sound");
+          if (sound) {
+            sound.currentTime = 0;
+            sound.play();
+          }
+        }
+      </script>
+
+      <div class="menu-item" onmouseenter="playSound()" style="background-image: url('https://images.unsplash.com/photo-1618130070080-91f4d55a2383?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0');">
+          <h3>Menthe</h3>
+          <p>3€ / 4€ / 5€</p>
+          <p class="desc">Le bissap à la menthe offre une alliance parfaite entre l’intensité des fleurs d’hibiscus et la fraîcheur végétale de la menthe.</p>
       </div>
-      <div class="menu-item" style="background-image: url('https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=400&h=300&q=80');">
+
+      <div class="menu-item" onmouseenter="playSound()" style="background-image: url('https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=400&h=300&q=80');">
         <h3>Pomme</h3>
         <p>3€ / 4€ / 5€</p>
+        <p class="desc">Le bissap à la pomme marie les notes acidulées de l’hibiscus à la douceur naturelle de la pomme verte.</p>
       </div>
-      <div class="menu-item" style="background-image: url('https://images.unsplash.com/photo-1682530016814-6a1c1311cd6e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+
+      <div class="menu-item" onmouseenter="playSound()" style="background-image: url('https://images.unsplash.com/photo-1682530016814-6a1c1311cd6e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0');">
         <h3>Gingembre + Citron</h3>
         <p>3€ / 4€ / 5€</p>
+        <p class="desc">Un bissap audacieux, rehaussé par la chaleur du gingembre et le peps du citron pour un coup de boost assuré.</p>
       </div>
-      <div class="menu-item" style="background-image: url('https://images.unsplash.com/photo-1549007953-2f2dc0b24019?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+
+      <div class="menu-item" onmouseenter="playSound()" style="background-image: url('https://images.unsplash.com/photo-1549007953-2f2dc0b24019?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0');">
         <h3>Fraise</h3>
         <p>3€ / 4€ / 5€</p>
+        <p class="desc">Succombez au bissap à la fraise : une harmonie fruitée, florale et sucrée à chaque gorgée.</p>
       </div>
-      <div class="menu-item" style="background-image: url('https://images.unsplash.com/photo-1577069861033-55d04cec4ef5?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+
+      <div class="menu-item" onmouseenter="playSound()" style="background-image: url('https://images.unsplash.com/photo-1577069861033-55d04cec4ef5?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0');">
         <h3>Framboise</h3>
         <p>3€ / 4€ / 5€</p>
+        <p class="desc">Le bissap à la framboise séduit par sa douceur florale et son acidité gourmande qui réveillent les papilles.</p>
       </div>
-      <div class="menu-item" style="background-image: url('https://images.unsplash.com/photo-1734771573616-7cb630b439bc?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+
+      <div class="menu-item" onmouseenter="playSound()" style="background-image: url('https://images.unsplash.com/photo-1734771573616-7cb630b439bc?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0');">
         <h3>Mélanges personnalisés</h3>
         <p>À partir de 4€</p>
+        <p class="desc">Composez votre propre cocktail de bissap en mariant deux saveurs pour un plaisir sur mesure.</p>
       </div>
     </div>
   </section>
@@ -210,6 +232,7 @@
     </p>
   </footer>
 
+   
   <script>
     gsap.utils.toArray("section").forEach((sec) => {
       gsap.from(sec, {
